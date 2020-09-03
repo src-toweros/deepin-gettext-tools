@@ -1,6 +1,6 @@
 Name:           deepin-gettext-tools
 Version:        1.0.8
-Release:        2
+Release:        3
 Summary:        Deepin Gettext Tools
 License:        GPLv3
 URL:            https://github.com/linuxdeepin/deepin-gettext-tools
@@ -9,10 +9,7 @@ Source0:        https://mirrors.aliyun.com/ubuntu-ports/pool/universe/d/%{name}/
 BuildArch:      noarch
 BuildRequires:  perl-XML-LibXML
 BuildRequires:  python3-devel
-#BuildRequires:  perl(Config::Tiny)
-#BuildRequires:  perl(Exporter::Tiny)
-#BuildRequires:  perl(XML::LibXML)
-#BuildRequires:  perl(XML::LibXML::PrettyPrint)
+BuildRequires:  perl(Config::Tiny)
 Requires:       gettext
 Requires:       qt5-linguist
 Requires:       perl(Config::Tiny)
@@ -61,8 +58,11 @@ install -m755 src/update_pot.py %{buildroot}%{_bindir}/deepin-update-pot
 %{_bindir}/deepin-generate-mo
 
 %changelog
-* Thu Sep 3 2020 weidong <weidong@uniontech.com> - 1.0.8-2
+* Thu Sep 3 2020 weidong <weidong@uniontech.com> - 1.0.8-3
 - fix source url in spec
+
+* Fri Aug 28 2020 chenbo pan <panchenbo@uniontech.com> - 1.0.8-2
+- fix check fail
 
 * Mon Aug 17 2020 weidong <weidong@uniontech.com> - 1.0.8-1
 - Initial release for OpenEuler
