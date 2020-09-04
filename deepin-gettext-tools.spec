@@ -1,10 +1,10 @@
 Name:           deepin-gettext-tools
 Version:        1.0.8
-Release:        2
+Release:        3
 Summary:        Deepin Gettext Tools
 License:        GPLv3
 URL:            https://github.com/linuxdeepin/deepin-gettext-tools
-Source0:        %{name}_%{version}.orig.tar.gz
+Source0:        https://mirrors.aliyun.com/ubuntu-ports/pool/universe/d/%{name}/%{name}_%{version}.orig.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  perl-XML-LibXML
@@ -58,6 +58,9 @@ install -m755 src/update_pot.py %{buildroot}%{_bindir}/deepin-update-pot
 %{_bindir}/deepin-generate-mo
 
 %changelog
+* Thu Sep 3 2020 weidong <weidong@uniontech.com> - 1.0.8-3
+- fix source url in spec
+
 * Fri Aug 28 2020 chenbo pan <panchenbo@uniontech.com> - 1.0.8-2
 - fix check fail
 
